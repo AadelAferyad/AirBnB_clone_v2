@@ -2,7 +2,8 @@
 """
 add new routes with flask
 """
-from flask import Flask, render_template
+from flask import Flask
+from flask import render_template
 
 app = Flask("__name__")
 
@@ -40,7 +41,7 @@ def number(n):
     return (f"{n} is a number")
 
 
-@app.route("/number_template/<int:n>", strict_slashes=False)
+@app.route("/number_template/<int:n>")
 def nb_template(n):
     """ render page jinja2"""
     return (render_template('5-number.html', n=n))
