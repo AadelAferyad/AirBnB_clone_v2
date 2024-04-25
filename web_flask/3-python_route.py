@@ -27,10 +27,11 @@ def c_with_txt(text):
 
 
 @app.route("/python/<string:text>", strict_slashes=False)
-def python_with_txt(text):
+@app.route("/python/", strict_slashes=False)
+def python_with_txt(text="is cool"):
     """ display text from the user """
     text = text.replace("_", " ")
-    return f"C {text}"
+    return f"Python {text}"
 
 
 if __name__ == "__main__":
