@@ -35,7 +35,7 @@ def python_with_txt(text="is cool"):
     return f"Python {text}"
 
 
-@app.route("/number/<int:n>")
+@app.route("/number/<int:n>", strict_slashes=False)
 def number(n):
     """ display number """
     return (f"{n} is a number")
