@@ -27,7 +27,7 @@ def c_with_txt(text):
 
 
 @app.route("/python/<string:text>", strict_slashes=False)
-def c_with_txt(text):
+def python_with_txt(text):
     """ display text from the user """
     text = text.replace("_", " ")
     return f"C {text}"
