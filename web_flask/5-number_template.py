@@ -41,7 +41,7 @@ def number(n):
 
 
 @app.route("/number_template/<int:n>")
-def number_template(n):
+def nb_template(n):
     """ render page jinja2"""
     return (render_template("5-number.html", n=n))
 
