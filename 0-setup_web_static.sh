@@ -17,5 +17,5 @@ ls -L /data/web_static/current > /dev/null 2>&1 && rm -f /data/web_static/curren
 ln -sf /data/web_static/releases/test/ /data/web_static/current
 sudo chown -R ubuntu:ubuntu /data/
 replacment="server_name _;\n\tlocation /hbnb_static {\n\t\talias /data/web_static/current/;\n\t}"
-sudo sed -i "s/server_name _;/$replacment/" /etc/nginx/site-enabled/default
+sudo sed -i "s@server_name _;@$replacment@" /etc/nginx/sites-enabled/default
 sudo service nginx restart
